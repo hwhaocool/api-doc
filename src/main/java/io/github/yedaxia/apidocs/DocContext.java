@@ -49,7 +49,11 @@ public class DocContext {
 
         LogUtils.info("find java src paths:  %s", javaSrcPaths);
 
+        //得到工程类型
         ProjectType projectType = findOutProjectType();
+        
+        //找到 Controllers 文件
+        //主要把文件读到  controllerFiles  里面
         findOutControllers(projectType);
     }
 
